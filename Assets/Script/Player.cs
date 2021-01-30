@@ -7,7 +7,7 @@ public class Player : MonoBehaviour
     private Collision coll;
     [HideInInspector]
     public Rigidbody2D rb;
-    //private AnimationScript anim;
+    private CharacterAnimation anim;
 
     [Space]
     [Header("Stats")]
@@ -50,7 +50,7 @@ public class Player : MonoBehaviour
     {
         coll = GetComponent<Collision>();
         rb = GetComponent<Rigidbody2D>();
-        //anim = GetComponentInChildren<AnimationScript>();
+        anim = GetComponent<CharacterAnimation>();
 
         collider = GetComponent<BoxCollider2D>();
 
@@ -66,12 +66,12 @@ public class Player : MonoBehaviour
         Vector2 dir = new Vector2(x, y);
 
         Walk(dir);
-        //anim.SetHorizontalMovement(x, y, rb.velocity.y);
+        anim.SetHorizontalMovement(x, y, rb.velocity.y);
 
         
         if (Input.GetButtonDown("Jump"))
         {
-            //anim.SetTrigger("jump");
+            anim.SetTrigger("jump");
             
             if (coll.onGround)
             {
@@ -100,12 +100,12 @@ public class Player : MonoBehaviour
         if (x > 0)
         {
             side = 1;
-            //anim.Flip(side);
+            anim.Flip(side);
         }
         if (x < 0)
         {
             side = -1;
-            //anim.Flip(side);
+            anim.Flip(side);
         }
 
         
@@ -132,7 +132,7 @@ public class Player : MonoBehaviour
         hasDashed = false;
         isDashing = false;
 
-        //side = anim.sr.flipX ? -1 : 1;
+        side = anim.sr.flipX ? -1 : 1;
 
     }
 
