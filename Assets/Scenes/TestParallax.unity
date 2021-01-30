@@ -517,6 +517,11 @@ PrefabInstance:
       propertyPath: speed
       value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 5493958505120351890, guid: b18e61e320b2d744fabb265688daf1c1,
+        type: 3}
+      propertyPath: collisionRadius
+      value: 0.13
+      objectReference: {fileID: 0}
     - target: {fileID: 5493958505120351901, guid: b18e61e320b2d744fabb265688daf1c1,
         type: 3}
       propertyPath: m_Name
@@ -525,7 +530,7 @@ PrefabInstance:
     - target: {fileID: 5493958505120351902, guid: b18e61e320b2d744fabb265688daf1c1,
         type: 3}
       propertyPath: m_SortingLayer
-      value: 7
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 5493958505120351902, guid: b18e61e320b2d744fabb265688daf1c1,
         type: 3}

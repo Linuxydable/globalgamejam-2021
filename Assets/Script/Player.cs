@@ -19,6 +19,8 @@ public class Player : MonoBehaviour
 
     [Space]
     [Header("Booleans")]
+    public bool hasGravity;
+    public bool hasLeg;
     public bool canMove;
     public bool wallGrab;
     public bool wallJumped;
