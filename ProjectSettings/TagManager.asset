@@ -44,6 +44,9 @@ TagManager:
   - name: Ciel
     uniqueID: 1393734441
     locked: 0
+  - name: Sun
+    uniqueID: 2453362939
+    locked: 0
   - name: Clouds_Back
     uniqueID: 2221714637
     locked: 0
