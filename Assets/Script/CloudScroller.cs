@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BackgroundScrowler : MonoBehaviour
+public class CloudScroller : MonoBehaviour
 {
     [SerializeField] float backgroundScrollSpeed = 0.2f;
     Material myMaterial;
@@ -12,7 +12,7 @@ public class BackgroundScrowler : MonoBehaviour
     void Start()
     {
         myMaterial = GetComponent<Renderer>().material;
-        offset = new Vector2(0, backgroundScrollSpeed);
+        offset = new Vector2(backgroundScrollSpeed,0 );
     }
 
     // Update is called once per frame
