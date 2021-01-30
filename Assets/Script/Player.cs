@@ -24,6 +24,7 @@ public class Player : MonoBehaviour
     public bool wallJumped;
     public bool wallSlide;
     public bool isDashing;
+    public bool isRed;
 
     [Space]
 
@@ -50,7 +51,6 @@ public class Player : MonoBehaviour
 
     }
 
-    // Update is called once per frame
     void FixedUpdate()
     {
 
@@ -62,33 +62,6 @@ public class Player : MonoBehaviour
 
         Walk(dir);
         //anim.SetHorizontalMovement(x, y, rb.velocity.y);
-
-
-        if (coll.climbUpLeft && !groundTouch && Input.GetButton("Fire3") && coll.onWall)
-        {
-            transform.position += new Vector3(-0.5f, 0.5f, 0);
-        }
-
-        if (coll.climbUpRight && !groundTouch && Input.GetButton("Fire3") && coll.onWall)
-        {
-            transform.position += new Vector3(0.5f, 0.5f, 0);
-        }
-
-        if (coll.onWall && Input.GetButton("Fire3") && canMove)
-        {
-            if (side != coll.wallSide)
-                //anim.Flip(side*-1);
-                wallGrab = true;
-            wallSlide = false;
-        }
-
-        if (Input.GetButtonUp("Fire3") || !coll.onWall || !canMove)
-        {
-            wallGrab = false;
-            wallSlide = false;
-        }
-
-
 
         
         if (Input.GetButtonDown("Jump"))
@@ -130,8 +103,24 @@ public class Player : MonoBehaviour
             //anim.Flip(side);
         }
 
-
+        
     }
+
+
+    void OnTriggerEnter2D(Collider2D col)
+    {
+        
+        
+        if(col.gameObject.tag == "Red")
+        {
+
+            Debug.Log("Collide with RED");
+            isRed = true;
+
+            col.gameObject.SetActive(false);
+        }
+    }
+
 
     void GroundTouch()
     {
