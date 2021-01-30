@@ -41,6 +41,9 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: Sun
+    uniqueID: 4179107549
+    locked: 0
   - name: Ciel
     uniqueID: 1393734441
     locked: 0
@@ -58,4 +61,7 @@ TagManager:
     locked: 0
   - name: Ground
     uniqueID: 2652846571
+    locked: 0
+  - name: CharacterLayer
+    uniqueID: 2034428143
     locked: 0
