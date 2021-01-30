@@ -31,6 +31,9 @@ public class Player : MonoBehaviour
     private bool groundTouch;
     private bool hasDashed;
 
+
+    public float x;
+
     public int side = 1;
 
     [Space]
@@ -54,7 +57,7 @@ public class Player : MonoBehaviour
     void FixedUpdate()
     {
 
-        float x = Input.GetAxis("Horizontal");
+        x = Input.GetAxis("Horizontal");
         float y = Input.GetAxis("Vertical");
         float xRaw = Input.GetAxisRaw("Horizontal");
         float yRaw = Input.GetAxisRaw("Vertical");
