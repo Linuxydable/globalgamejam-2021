@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<< HEAD:Assets/Animator.meta
 guid: 642641a7b0cf50d47b0d7d1fda018ff7
+=======
+guid: 5b6d003a03e214b45b30fef6fae964bf
+>>>>>>> 65fd9e9 (Adding Parallaxe when moving):Assets/Prefab.meta
 folderAsset: yes
 DefaultImporter:
   externalObjects: {}
