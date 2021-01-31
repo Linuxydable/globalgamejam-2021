@@ -73,20 +73,58 @@ public class Player : MonoBehaviour
         Walk(dir);
         anim.SetHorizontalMovement(x, y, rb.velocity.y);
 
-        
+        if (!hasLeg)
+        {
+            Vector3 temp = transform.position;
+            temp.y = 0.5f;
+            transform.position= temp;
+
+            Vector2 PosColl = collider.offset;
+            PosColl.y = 1f;
+            collider.offset = PosColl;
+
+            rb.gravityScale = 0.0f;
+        }
+
+        if (hasLeg)
+        {
+            rb.gravityScale = 1.0f;
+
+            Vector2 PosColl = collider.offset;
+            PosColl.y = -0.16f;
+            collider.offset = PosColl;
+
+            coll.bottomOffset.y = -1.13f;
+        }
+
+        if(hasLeg && hasTail)
+        {
+            Vector2 PosColl = collider.offset;
+            PosColl.y = -0.95f;
+            collider.offset = PosColl;
+
+            coll.bottomOffset.y = -2f;
+        }
+
+
         if (Input.GetButtonDown("Jump"))
         {
-            
-            
-            if (coll.onGround)
+            if (hasLeg)
             {
-                anim.SetTrigger("jump");
-                Jump(Vector2.up, false);
-                Debug.Log("COUCOUC");
+                if (coll.onGround)
+                {
+                    anim.SetTrigger("jump");
+                    Jump(Vector2.up, false);
+                    
+                }
             }
-                
-            if (coll.onWall && !coll.onGround)
-                WallJump();
+            else
+            {
+                Debug.Log("FLY DOWN");
+                anim.SetTrigger("jump");
+                Jump(Vector2.down, false);
+            }    
+            
         }
 
         if (x > 0)
@@ -131,6 +169,9 @@ public class Player : MonoBehaviour
 
         if (ControlAnim != oldControlAnim)
         {
+            if (ControlAnim == "CharacterAnimatorBT")
+                ControlAnim = "CharacterAnimatorB";
+
             anim.changeSprite(ControlAnim);
         }
 
@@ -146,9 +187,32 @@ public class Player : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D col)
     {
-        
-        
-        if(col.gameObject.tag == "Red")
+
+        if (col.name == "Leg")
+        {
+            Debug.Log("Collide with RED");
+            hasLeg = true;
+        }
+
+        if (col.name == "Eye")
+        {
+            hasEye = true;
+        }
+
+        if (col.name == "Tail")
+        {
+            hasTail = true;
+        }
+
+        if (col.name == "Arm")
+        {
+            hasArm = true;
+        }
+
+
+
+
+        if (col.gameObject.tag == "Red")
         {
 
             Debug.Log("Collide with RED");
@@ -168,45 +232,9 @@ public class Player : MonoBehaviour
 
     }
 
-    private void WallJump()
-    {
-        if ((side == 1 && coll.onRightWall) || side == -1 && !coll.onRightWall)
-        {
-            side *= -1;
-            //anim.Flip(side);
-        }
-
-        StopCoroutine(DisableMovement(0));
-        StartCoroutine(DisableMovement(.1f));
-
-        Vector2 wallDir = coll.onRightWall ? Vector2.left : Vector2.right;
-
-        Jump((Vector2.up / 1.5f + wallDir / 1.5f), true);
-
-        wallJumped = true;
-    }
-
-    private void WallSlide()
-    {
-        if (coll.wallSide != side)
-            //anim.Flip(side * -1);
-
-        if (!canMove)
-            return;
-
-        bool pushingWall = false;
-        if ((rb.velocity.x > 0 && coll.onRightWall) || (rb.velocity.x < 0 && coll.onLeftWall))
-        {
-            pushingWall = true;
-        }
-        float push = pushingWall ? 0 : rb.velocity.x;
-
-        rb.velocity = new Vector2(push, -slideSpeed);
-    }
-
     private void Walk(Vector2 dir)
     {
-        
+        Debug.Log("MOVING");
             rb.velocity = new Vector2(dir.x * speed, rb.velocity.y);
         
     }

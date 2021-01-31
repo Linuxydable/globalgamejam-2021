@@ -95,20 +95,5 @@ public class PlatformTile : MonoBehaviour
         
         gameObject.GetComponent<SpriteRenderer>().sprite = tiles[testTile];
     }
-
-    
-
-    void OnDrawGizmos()
-    {
-        Gizmos.color = Color.red;
-
-        var positions = new Vector2[] { bottomOffset, rightOffset, leftOffset };
-
-        Gizmos.DrawWireSphere((Vector2)transform.position + bottomOffset, collisionRadius);
-        Gizmos.DrawWireSphere((Vector2)transform.position + rightOffset, collisionRadius);
-        Gizmos.DrawWireSphere((Vector2)transform.position + leftOffset, collisionRadius);
-        Gizmos.DrawWireSphere((Vector2)transform.position + upOffset, collisionRadius);
-
-    }
     
 }

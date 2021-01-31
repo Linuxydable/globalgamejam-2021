@@ -7,12 +7,15 @@ public class Sol_Mur : MonoBehaviour
     [SerializeField] int colonnes;
     [SerializeField] int lignes;
     [SerializeField] PlatformTile tile;
+    [SerializeField] bool platformMakerOn = true;
 
     float offset = 0.5f;
 
     // Start is called before the first frame update
     void Start()
     {
+        if(!platformMakerOn) { return; };
+
         for (int j = 0; j < lignes; j++)
         {
             for (int i = 0; i < colonnes; i++)

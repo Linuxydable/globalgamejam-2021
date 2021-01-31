@@ -49,7 +49,7 @@ public class MainMenu : MonoBehaviour
     void OnPlayClick()
     {
         //SoundManager.instance.PlaySelectSound();
-        SceneManager.LoadScene("LevelSelection");
+        SceneManager.LoadScene("Level 1-3");
     }
 
     void OnQuitClick()
