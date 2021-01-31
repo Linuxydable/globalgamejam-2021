@@ -40,6 +40,26 @@ MonoBehaviour:
     data1: 0
     data2: 0
   Exists: 0
+--- !u!114 &-8429094175990753422
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Music_InGame/Music
+  m_EditorClassIdentifier: 
+  Name: Music
+  Min: 0
+  Max: 3
+  Default: 0
+  ID:
+    data1: 0
+    data2: 0
+  Exists: 1
 --- !u!114 &-7211810944173204877
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -75,11 +95,11 @@ MonoBehaviour:
   Path: FmodProject/Integrationsystemd/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 637477007064585254
+  lastModified: 637477009391937056
   LoadResult: 0
   FileSizes:
   - Name: Desktop
-    Value: 1280
+    Value: 1364
   Exists: 1
 --- !u!114 &-5357705276548540055
 MonoBehaviour:
@@ -169,6 +189,30 @@ MonoBehaviour:
   Is3D: 0
   IsOneShot: 0
   Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 109090
+--- !u!114 &-2753460748215201922
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/MUSIC/Music_InGame
+  m_EditorClassIdentifier: 
+  Path: event:/MUSIC/Music_InGame
+  guid: 24f058debde07548aa6008ed041811a4
+  Banks:
+  - {fileID: 1584614871308078951}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters:
+  - {fileID: -8429094175990753422}
   MinDistance: 0
   MaxDistance: 0
   Length: 109090
@@ -289,13 +333,14 @@ MonoBehaviour:
   - {fileID: -3929963965590172982}
   - {fileID: -681355989579623236}
   - {fileID: -5357705276548540055}
+  - {fileID: -2753460748215201922}
   EditorParameters:
   - {fileID: -8776666198112153985}
   MasterBanks:
   - {fileID: 1584614871308078951}
   StringsBanks:
   - {fileID: -5359628404669247250}
-  stringsBankWriteTime: 637477007064585254
+  stringsBankWriteTime: 637477009391937056
   cacheVersion: 6
 --- !u!114 &1584614871308078951
 MonoBehaviour:
@@ -312,7 +357,7 @@ MonoBehaviour:
   Path: FmodProject/Integrationsystemd/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 637477007064525257
+  lastModified: 637477009391887054
   LoadResult: 0
   FileSizes: []
   Exists: 1
