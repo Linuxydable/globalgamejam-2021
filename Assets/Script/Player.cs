@@ -169,6 +169,9 @@ public class Player : MonoBehaviour
 
         if (ControlAnim != oldControlAnim)
         {
+            if (ControlAnim == "CharacterAnimatorBT")
+                ControlAnim = "CharacterAnimatorB";
+
             anim.changeSprite(ControlAnim);
         }
 
@@ -184,7 +187,7 @@ public class Player : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D col)
     {
-        
+        Debug.Log("COLLIDER WITH : " + col.name);
         
         if(col.gameObject.tag == "Red")
         {
@@ -208,7 +211,7 @@ public class Player : MonoBehaviour
 
     private void Walk(Vector2 dir)
     {
-        
+        Debug.Log("MOVING");
             rb.velocity = new Vector2(dir.x * speed, rb.velocity.y);
         
     }
