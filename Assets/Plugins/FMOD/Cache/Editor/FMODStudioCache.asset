@@ -75,11 +75,11 @@ MonoBehaviour:
   Path: FmodProject/Integrationsystemd/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 637476998595137122
+  lastModified: 637477007064585254
   LoadResult: 0
   FileSizes:
   - Name: Desktop
-    Value: 1364
+    Value: 1280
   Exists: 1
 --- !u!114 &-5357705276548540055
 MonoBehaviour:
@@ -164,8 +164,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: event:/MUSIC/Music_InGame
   guid: 24f058debde07548aa6008ed041811a4
-  Banks:
-  - {fileID: 1584614871308078951}
+  Banks: []
   IsStream: 1
   Is3D: 0
   IsOneShot: 0
@@ -282,7 +281,6 @@ MonoBehaviour:
   - {fileID: 1584614871308078951}
   EditorEvents:
   - {fileID: 4376871781988425646}
-  - {fileID: -3158656203261511295}
   - {fileID: -1370299338263559352}
   - {fileID: -3817277410203827747}
   - {fileID: -2268886646083709737}
@@ -297,7 +295,7 @@ MonoBehaviour:
   - {fileID: 1584614871308078951}
   StringsBanks:
   - {fileID: -5359628404669247250}
-  stringsBankWriteTime: 637476998595137122
+  stringsBankWriteTime: 637477007064585254
   cacheVersion: 6
 --- !u!114 &1584614871308078951
 MonoBehaviour:
@@ -314,7 +312,7 @@ MonoBehaviour:
   Path: FmodProject/Integrationsystemd/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 637476998595077125
+  lastModified: 637477007064525257
   LoadResult: 0
   FileSizes: []
   Exists: 1
