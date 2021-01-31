@@ -93,6 +93,17 @@ public class Player : MonoBehaviour
             Vector2 PosColl = collider.offset;
             PosColl.y = -0.16f;
             collider.offset = PosColl;
+
+            coll.bottomOffset.y = -1.13f;
+        }
+
+        if(hasLeg && hasTail)
+        {
+            Vector2 PosColl = collider.offset;
+            PosColl.y = -0.95f;
+            collider.offset = PosColl;
+
+            coll.bottomOffset.y = -2f;
         }
 
 
@@ -193,42 +204,6 @@ public class Player : MonoBehaviour
 
         side = anim.sr.flipX ? -1 : 1;
 
-    }
-
-    private void WallJump()
-    {
-        if ((side == 1 && coll.onRightWall) || side == -1 && !coll.onRightWall)
-        {
-            side *= -1;
-            //anim.Flip(side);
-        }
-
-        StopCoroutine(DisableMovement(0));
-        StartCoroutine(DisableMovement(.1f));
-
-        Vector2 wallDir = coll.onRightWall ? Vector2.left : Vector2.right;
-
-        Jump((Vector2.up / 1.5f + wallDir / 1.5f), true);
-
-        wallJumped = true;
-    }
-
-    private void WallSlide()
-    {
-        if (coll.wallSide != side)
-            //anim.Flip(side * -1);
-
-        if (!canMove)
-            return;
-
-        bool pushingWall = false;
-        if ((rb.velocity.x > 0 && coll.onRightWall) || (rb.velocity.x < 0 && coll.onLeftWall))
-        {
-            pushingWall = true;
-        }
-        float push = pushingWall ? 0 : rb.velocity.x;
-
-        rb.velocity = new Vector2(push, -slideSpeed);
     }
 
     private void Walk(Vector2 dir)
