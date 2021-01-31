@@ -187,9 +187,32 @@ public class Player : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D col)
     {
-        Debug.Log("COLLIDER WITH : " + col.name);
-        
-        if(col.gameObject.tag == "Red")
+
+        if (col.name == "Leg")
+        {
+            Debug.Log("Collide with RED");
+            hasLeg = true;
+        }
+
+        if (col.name == "Eye")
+        {
+            hasEye = true;
+        }
+
+        if (col.name == "Tail")
+        {
+            hasTail = true;
+        }
+
+        if (col.name == "Arm")
+        {
+            hasArm = true;
+        }
+
+
+
+
+        if (col.gameObject.tag == "Red")
         {
 
             Debug.Log("Collide with RED");
