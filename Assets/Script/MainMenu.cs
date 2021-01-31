@@ -15,10 +15,11 @@ public class MainMenu : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        if (GameObject.FindWithTag("SoundManager") == null)
-        {
+        //if (GameObject.FindWithTag("SoundManager") == null)
+        //{
             //Instantiate(soundManagerPrefab);
-        }
+        //    { return; };
+        //}
 
         //menuSelection = new MenuSelection();
         buttons = new List<Button>();
@@ -50,6 +51,7 @@ public class MainMenu : MonoBehaviour
     {
         //SoundManager.instance.PlaySelectSound();
         SceneManager.LoadScene("Level 1-3");
+        Debug.Log("play clicked");
     }
 
     void OnQuitClick()
