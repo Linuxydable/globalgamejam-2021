@@ -76,10 +76,11 @@ public class Player : MonoBehaviour
         
         if (Input.GetButtonDown("Jump"))
         {
-            anim.SetTrigger("jump");
+            
             
             if (coll.onGround)
             {
+                anim.SetTrigger("jump");
                 Jump(Vector2.up, false);
                 Debug.Log("COUCOUC");
             }
