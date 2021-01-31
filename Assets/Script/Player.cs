@@ -192,21 +192,25 @@ public class Player : MonoBehaviour
         {
             Debug.Log("Collide with RED");
             hasLeg = true;
+            col.gameObject.SetActive(false);
         }
 
         if (col.name == "Eye")
         {
             hasEye = true;
+            col.gameObject.SetActive(false);
         }
 
         if (col.name == "Tail")
         {
             hasTail = true;
+            col.gameObject.SetActive(false);
         }
 
         if (col.name == "Arm")
         {
             hasArm = true;
+            col.gameObject.SetActive(false);
         }
 
 

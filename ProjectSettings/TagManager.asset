@@ -27,7 +27,7 @@ TagManager:
   - 
   - Cloud front
   - 
-  - 
+  - Sun
   - 
   - 
   - 
@@ -41,14 +41,8 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
-  - name: Sun
-    uniqueID: 4179107549
-    locked: 0
   - name: Ciel
     uniqueID: 1393734441
-    locked: 0
-  - name: Sun
-    uniqueID: 2453362939
     locked: 0
   - name: Clouds_Back
     uniqueID: 2221714637
@@ -58,6 +52,12 @@ TagManager:
     locked: 0
   - name: Cloud_Front
     uniqueID: 4152184397
+    locked: 0
+  - name: Sun
+    uniqueID: 2453362939
+    locked: 0
+  - name: Sun
+    uniqueID: 4179107549
     locked: 0
   - name: Ground
     uniqueID: 2652846571
