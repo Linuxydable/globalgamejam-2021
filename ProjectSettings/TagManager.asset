@@ -3,7 +3,8 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Red
   layers:
   - Default
   - TransparentFX
@@ -13,21 +14,21 @@ TagManager:
   - UI
   - 
   - 
+  - Ground
+  - 
+  - 
+  - 
+  - Cloud Back
+  - 
+  - 
+  - Cloud Mid
   - 
   - 
   - 
   - 
+  - Cloud front
   - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
+  - Sun
   - 
   - 
   - 
@@ -40,4 +41,28 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Ciel
+    uniqueID: 1393734441
+    locked: 0
+  - name: Clouds_Back
+    uniqueID: 2221714637
+    locked: 0
+  - name: Cloud_Mid
+    uniqueID: 2570756869
+    locked: 0
+  - name: Cloud_Front
+    uniqueID: 4152184397
+    locked: 0
+  - name: Sun
+    uniqueID: 2453362939
+    locked: 0
+  - name: Sun
+    uniqueID: 4179107549
+    locked: 0
+  - name: Ground
+    uniqueID: 2652846571
+    locked: 0
+  - name: CharacterLayer
+    uniqueID: 2034428143
     locked: 0

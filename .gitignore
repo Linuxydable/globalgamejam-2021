@@ -58,7 +58,3 @@ sysinfo.txt
 # Crashlytics generated file
 crashlytics-build.properties
 
-# Wwise Ignore
-/C:/Users/quent/OneDrive/Documents/GlobalGameJam/Wwise_Project/GlobalGameJam/GlobalGameJam/Originals/SFX/*.akd
-/C:/Users/quent/OneDrive/Documents/GlobalGameJam/Wwise_Project/.cache/
-
