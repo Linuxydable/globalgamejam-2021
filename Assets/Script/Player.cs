@@ -48,6 +48,11 @@ public class Player : MonoBehaviour
 
     BoxCollider2D collider;
 
+    //FMOD
+    FMOD.Studio.EventInstance PlayJump;
+    FMOD.Studio.EventInstance PlayWalk;
+    FMOD.Studio.EventInstance BgMusic;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -59,6 +64,14 @@ public class Player : MonoBehaviour
 
 
         knowCompetence = new bool[4];
+
+        //FMOD
+        PlayJump = FMODUnity.RuntimeManager.CreateInstance("event:/CHAR/CHAR_Jump");
+        PlayWalk = FMODUnity.RuntimeManager.CreateInstance("event:/CHAR/CHAR_Walk");
+
+        BgMusic = FMODUnity.RuntimeManager.CreateInstance("event:/MUSIC/Music_InGame");
+        BgMusic.setParameterByName("Music", 1);
+        BgMusic.start();
     }
 
     void FixedUpdate()
@@ -72,6 +85,17 @@ public class Player : MonoBehaviour
 
         Walk(dir);
         anim.SetHorizontalMovement(x, y, rb.velocity.y);
+
+        //FMOD
+        if (hasTail)
+        {
+            BgMusic.setParameterByName("Music", 1);
+        }
+
+        else if (!hasTail)
+        {
+            BgMusic.setParameterByName("Music", 0);
+        }
 
         if (!hasLeg)
         {
@@ -118,6 +142,11 @@ public class Player : MonoBehaviour
         {
             if (hasLeg)
             {
+
+                //FMOD
+                PlayJump.start();
+                BgMusic.setParameterByName("Music", 1);
+
                 if (coll.onGround)
                 {
                     anim.SetTrigger("jump");
