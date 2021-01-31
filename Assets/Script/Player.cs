@@ -48,9 +48,15 @@ public class Player : MonoBehaviour
 
     BoxCollider2D collider;
 
+    //FMOD
+    FMOD.Studio.EventInstance PlayJump;
+    FMOD.Studio.EventInstance PlayWalk;
+    FMOD.Studio.EventInstance BgMusic;
+
     // Start is called before the first frame update
     void Start()
     {
+
         coll = GetComponent<Collision>();
         rb = GetComponent<Rigidbody2D>();
         anim = GetComponent<CharacterAnimation>();
@@ -59,6 +65,14 @@ public class Player : MonoBehaviour
 
 
         knowCompetence = new bool[4];
+
+        //FMOD
+        PlayJump = FMODUnity.RuntimeManager.CreateInstance("event:/CHAR/CHAR_Jump");
+        PlayWalk = FMODUnity.RuntimeManager.CreateInstance("event:/CHAR/CHAR_Walk");
+
+        BgMusic = FMODUnity.RuntimeManager.CreateInstance("event:/MUSIC/Music_InGame");
+        BgMusic.setParameterByName("Music", 0);
+        BgMusic.start();
     }
 
     void FixedUpdate()
@@ -72,6 +86,16 @@ public class Player : MonoBehaviour
 
         Walk(dir);
         anim.SetHorizontalMovement(x, y, rb.velocity.y);
+
+        if (hasTail)
+        {
+            BgMusic.setParameterByName("Music", 1);
+        }
+
+        else if (!hasTail)
+        {
+            BgMusic.setParameterByName("Music", 0);
+        }
 
         if (!hasLeg)
         {
@@ -109,8 +133,14 @@ public class Player : MonoBehaviour
 
         if (Input.GetButtonDown("Jump"))
         {
+
             if (hasLeg)
             {
+
+                //FMOD
+                PlayJump.start();
+                BgMusic.setParameterByName("Music", 1);
+
                 if (coll.onGround)
                 {
                     anim.SetTrigger("jump");
@@ -235,13 +265,13 @@ public class Player : MonoBehaviour
     private void Walk(Vector2 dir)
     {
         Debug.Log("MOVING");
-            rb.velocity = new Vector2(dir.x * speed, rb.velocity.y);
+        rb.velocity = new Vector2(dir.x * speed, rb.velocity.y);
         
     }
 
     private void Jump(Vector2 dir, bool wall)
     {
-
+        FMODUnity.RuntimeManager.PlayOneShot("event:/CHAR/CHAR_Jump",GetComponent<Transform>().position);
         rb.velocity = new Vector2(rb.velocity.x, 0);
         rb.velocity += dir * jumpForce;
 
