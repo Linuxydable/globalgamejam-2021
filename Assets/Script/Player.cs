@@ -106,6 +106,13 @@ public class Player : MonoBehaviour
             coll.bottomOffset.y = -2f;
         }
 
+        if (hasEye && hasLeg)
+        {
+            Vector2 PosColl = collider.offset;
+            PosColl.y = 0f;
+            collider.offset = PosColl;
+        }
+
 
         if (Input.GetButtonDown("Jump"))
         {
