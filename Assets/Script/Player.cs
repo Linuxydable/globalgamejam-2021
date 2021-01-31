@@ -20,21 +20,24 @@ public class Player : MonoBehaviour
     [Space]
     [Header("Booleans")]
     public bool hasGravity;
-    public bool hasLeg;
     public bool canMove;
     public bool wallGrab;
     public bool wallJumped;
     public bool wallSlide;
     public bool isDashing;
     public bool isRed;
+    public bool hasLeg;
+    public bool hasEye;
+    public bool hasArm;
+    public bool hasTail;
+    private string ControlAnim;
+    private string oldControlAnim;
+    private bool[] knowCompetence;
 
     [Space]
 
     private bool groundTouch;
     private bool hasDashed;
-
-
-    public float x;
 
     public int side = 1;
 
@@ -54,12 +57,14 @@ public class Player : MonoBehaviour
 
         collider = GetComponent<BoxCollider2D>();
 
+
+        knowCompetence = new bool[4];
     }
 
     void FixedUpdate()
     {
 
-        x = Input.GetAxis("Horizontal");
+        float x = Input.GetAxis("Horizontal");
         float y = Input.GetAxis("Vertical");
         float xRaw = Input.GetAxisRaw("Horizontal");
         float yRaw = Input.GetAxisRaw("Vertical");
@@ -83,30 +88,56 @@ public class Player : MonoBehaviour
                 WallJump();
         }
 
-        if (coll.onGround && !groundTouch)
-        {
-            GroundTouch();
-            groundTouch = true;
-        }
-
-        if (!coll.onGround && groundTouch)
-        {
-            groundTouch = false;
-        }
-
-        if (wallGrab || wallSlide || !canMove)
-            return;
-
         if (x > 0)
         {
+
+            Debug.Log("Side X +");
             side = 1;
             anim.Flip(side);
         }
         if (x < 0)
         {
+            Debug.Log("Side X -");
             side = -1;
             anim.Flip(side);
         }
+
+        
+
+        ControlAnim = "CharacterAnimatorB";
+
+        if (hasLeg)
+            ControlAnim += "L";
+        else
+            knowCompetence[0] = false;
+
+        if (hasEye)
+            ControlAnim += "E";
+        else
+            knowCompetence[1] = false;
+
+        if (hasTail)
+            ControlAnim += "T";
+        else
+            knowCompetence[2] = false;
+
+        if (hasArm)
+            ControlAnim += "A"; 
+        else
+            knowCompetence[3] = false;
+
+        Debug.Log("Competence : " + ControlAnim);
+
+        if (ControlAnim != oldControlAnim)
+        {
+            anim.changeSprite(ControlAnim);
+        }
+
+        oldControlAnim = ControlAnim;
+
+
+
+        Debug.Log("Comp = " + knowCompetence);
 
         
     }

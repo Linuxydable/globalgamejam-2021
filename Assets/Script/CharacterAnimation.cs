@@ -7,6 +7,9 @@ public class CharacterAnimation : MonoBehaviour
     private Animator anim;
     private Player move;
     private Collision coll;
+
+    public RuntimeAnimatorController[] controllersAnim;
+
     [HideInInspector]
     public SpriteRenderer sr;
 
@@ -28,6 +31,17 @@ public class CharacterAnimation : MonoBehaviour
         anim.SetBool("canMove", move.canMove);
         anim.SetBool("isDashing", move.isDashing);
 
+    }
+
+    public void changeSprite(string name)
+    {
+        foreach(RuntimeAnimatorController go in controllersAnim)
+        {
+            if(go.name == name)
+            {
+                anim.runtimeAnimatorController = go;
+            }
+        }
     }
 
     public void SetHorizontalMovement(float x, float y, float yVel)

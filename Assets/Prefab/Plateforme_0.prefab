@@ -28,7 +28,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 9122911914329521115}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.25, y: 1.75, z: 0}
+  m_LocalPosition: {x: 1.25, y: 1.786, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -46,6 +46,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 95dba9646af775f489c53f790947023d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 0
   tileNumber: 0
   tiles:
   - {fileID: 6173564918237247953, guid: 03363a1b6a6a927448bac629c6a04c84, type: 3}
@@ -57,6 +60,15 @@ MonoBehaviour:
   - {fileID: 1545614631380089480, guid: 03363a1b6a6a927448bac629c6a04c84, type: 3}
   - {fileID: 6742638501939152619, guid: 03363a1b6a6a927448bac629c6a04c84, type: 3}
   - {fileID: 396038127280639400, guid: 03363a1b6a6a927448bac629c6a04c84, type: 3}
+  left: 0
+  right: 0
+  up: 0
+  down: 0
+  collisionRadius: 0.25
+  upOffset: {x: 0, y: 0.5}
+  bottomOffset: {x: 0, y: -0.5}
+  rightOffset: {x: 0.5, y: 0}
+  leftOffset: {x: -0.5, y: 0}
 --- !u!212 &9122911914329521113
 SpriteRenderer:
   m_ObjectHideFlags: 0
