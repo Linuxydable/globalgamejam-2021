@@ -73,20 +73,47 @@ public class Player : MonoBehaviour
         Walk(dir);
         anim.SetHorizontalMovement(x, y, rb.velocity.y);
 
-        
+        if (!hasLeg)
+        {
+            Vector3 temp = transform.position;
+            temp.y = 0.5f;
+            transform.position= temp;
+
+            Vector2 PosColl = collider.offset;
+            PosColl.y = 1f;
+            collider.offset = PosColl;
+
+            rb.gravityScale = 0.0f;
+        }
+
+        if (hasLeg)
+        {
+            rb.gravityScale = 1.0f;
+
+            Vector2 PosColl = collider.offset;
+            PosColl.y = -0.16f;
+            collider.offset = PosColl;
+        }
+
+
         if (Input.GetButtonDown("Jump"))
         {
-            
-            
-            if (coll.onGround)
+            if (hasLeg)
             {
-                anim.SetTrigger("jump");
-                Jump(Vector2.up, false);
-                Debug.Log("COUCOUC");
+                if (coll.onGround)
+                {
+                    anim.SetTrigger("jump");
+                    Jump(Vector2.up, false);
+                    
+                }
             }
-                
-            if (coll.onWall && !coll.onGround)
-                WallJump();
+            else
+            {
+                Debug.Log("FLY DOWN");
+                anim.SetTrigger("jump");
+                Jump(Vector2.down, false);
+            }    
+            
         }
 
         if (x > 0)
