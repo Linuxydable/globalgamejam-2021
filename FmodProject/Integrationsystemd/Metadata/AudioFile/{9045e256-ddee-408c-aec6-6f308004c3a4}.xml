@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.01.00">
+	<object class="AudioFile" id="{9045e256-ddee-408c-aec6-6f308004c3a4}">
+		<property name="assetPath">
+			<value>W_ingame_all.wav</value>
+		</property>
+		<property name="isStreaming">
+			<value>true</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>44.0999985</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>97.090884353741501</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{ec7fcbc2-57e8-4e51-ae8d-277e60fcc436}</destination>
+		</relationship>
+	</object>
+</objects>

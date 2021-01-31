@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.01.00">
+	<object class="AudioFile" id="{ac7866e4-98eb-4e84-b1b8-620d3ac4f790}">
+		<property name="assetPath">
+			<value>AMB_Birds_03_lp.wav</value>
+		</property>
+		<property name="isStreaming">
+			<value>true</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>44.0999985</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>25.699682539682538</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{ec7fcbc2-57e8-4e51-ae8d-277e60fcc436}</destination>
+		</relationship>
+	</object>
+</objects>
