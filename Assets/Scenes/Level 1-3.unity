@@ -486,6 +486,21 @@ PrefabInstance:
       propertyPath: m_Name
       value: Grid
       objectReference: {fileID: 0}
+    - target: {fileID: 3892504192486225382, guid: 0071450a9b77eb940b17792e5230eb92,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 3892504192772454068, guid: 0071450a9b77eb940b17792e5230eb92,
+        type: 3}
+      propertyPath: m_SortingLayer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 3892504192772454068, guid: 0071450a9b77eb940b17792e5230eb92,
+        type: 3}
+      propertyPath: m_SortingLayerID
+      value: 2034428143
+      objectReference: {fileID: 0}
     - target: {fileID: 3892504192772454069, guid: 0071450a9b77eb940b17792e5230eb92,
         type: 3}
       propertyPath: m_Size.x
@@ -12363,6 +12378,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Enabled
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3892504192772454075, guid: 0071450a9b77eb940b17792e5230eb92,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0071450a9b77eb940b17792e5230eb92, type: 3}

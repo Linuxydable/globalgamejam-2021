@@ -97,20 +97,20 @@ public class Player : MonoBehaviour
             coll.bottomOffset.y = -1.13f;
         }
 
-        if(hasLeg && hasTail)
+        if (hasEye && hasLeg)
+        {
+            Vector2 PosColl = collider.offset;
+            PosColl.y = 0f;
+            collider.offset = PosColl;
+        }
+
+        if (hasLeg && hasTail)
         {
             Vector2 PosColl = collider.offset;
             PosColl.y = -0.95f;
             collider.offset = PosColl;
 
             coll.bottomOffset.y = -2f;
-        }
-
-        if (hasEye && hasLeg)
-        {
-            Vector2 PosColl = collider.offset;
-            PosColl.y = 0f;
-            collider.offset = PosColl;
         }
 
 
