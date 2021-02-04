@@ -139,7 +139,7 @@ public class Player : MonoBehaviour
             coll.bottomOffset.y = -2f;
         }
 
-        while (Input.GetButton("Jump"))
+        if (Input.GetButton("Jump"))
         {
             if (coll.onGround)
             {
