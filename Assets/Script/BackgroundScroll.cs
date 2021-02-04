@@ -6,7 +6,8 @@ public class BackgroundScroll : MonoBehaviour
 {
 
     public Transform[] backgrounds;
-    private float[] parallaxScales;
+    [SerializeField] float[] parallaxScales;
+    [SerializeField] float[] parralaxSpeed;
     public float smoothing = 1f;
 
     private Transform cam;
@@ -25,7 +26,7 @@ public class BackgroundScroll : MonoBehaviour
 
         for(int i = 0; i < backgrounds.Length; i++)
         {
-            parallaxScales[i] = backgrounds[i].position.z * -1;
+            parallaxScales[i] = backgrounds[i].position.z * -1* parralaxSpeed[i];
         }
     }
 
@@ -36,7 +37,7 @@ public class BackgroundScroll : MonoBehaviour
         {
             float parallax = (previousCamPosition.x - cam.position.x) * parallaxScales[i];
 
-            float backgroundTargetPosX = backgrounds[i].position.x + parallax;
+            float backgroundTargetPosX = backgrounds[i].position.x + parallax* parralaxSpeed[i];
 
             Vector3 backgroundTargetPos = new Vector3(backgroundTargetPosX, backgrounds[i].position.y, backgrounds[i].position.z);
 

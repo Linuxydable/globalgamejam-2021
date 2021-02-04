@@ -23,9 +23,9 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 223709833133225707}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -6.6067133, y: 1.0743811, z: -189.56781}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 48, y: 9, z: 1}
   m_Children:
   - {fileID: 7704102333608341851}
   - {fileID: 7704102333379794784}
@@ -46,7 +46,7 @@ GameObject:
   - component: {fileID: 7704102333379794798}
   - component: {fileID: 7704102333379794785}
   m_Layer: 15
-  m_Name: Background_clouds_mid
+  m_Name: clouds_mid
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -59,9 +59,9 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7704102333379794787}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 6.6067133, y: -1.0743811, z: 192.4378}
-  m_LocalScale: {x: 16, y: 9, z: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1257401732076925725}
   m_RootOrder: 1
@@ -139,7 +139,7 @@ GameObject:
   - component: {fileID: 7704102333608341849}
   - component: {fileID: 7704102333608341848}
   m_Layer: 12
-  m_Name: Background_clouds_front
+  m_Name: clouds_front
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -152,9 +152,9 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7704102333608341850}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 6.6067133, y: -1.0743811, z: 191.03781}
-  m_LocalScale: {x: 16, y: 9, z: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1257401732076925725}
   m_RootOrder: 0
@@ -232,7 +232,7 @@ GameObject:
   - component: {fileID: 7704102334177653868}
   - component: {fileID: 7704102334177653869}
   m_Layer: 20
-  m_Name: Background_clouds_back
+  m_Name: clouds_back
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -245,9 +245,9 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7704102334177653857}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 6.6067133, y: -1.0743811, z: 194.77782}
-  m_LocalScale: {x: 16, y: 9, z: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1257401732076925725}
   m_RootOrder: 2

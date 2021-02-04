@@ -150,12 +150,12 @@ TextureImporter:
       name: Perso_walk&Jump_BEL_0
       rect:
         serializedVersion: 2
-        x: 3
+        x: 0
         y: 212
-        width: 42
-        height: 46
+        width: 50
+        height: 53
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -171,12 +171,12 @@ TextureImporter:
       name: Perso_walk&Jump_BEL_1
       rect:
         serializedVersion: 2
-        x: 53
+        x: 50
         y: 212
-        width: 42
-        height: 45
+        width: 50
+        height: 53
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -192,12 +192,12 @@ TextureImporter:
       name: Perso_walk&Jump_BEL_2
       rect:
         serializedVersion: 2
-        x: 3
+        x: 0
         y: 159
-        width: 42
-        height: 46
+        width: 50
+        height: 53
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -213,12 +213,12 @@ TextureImporter:
       name: Perso_walk&Jump_BEL_3
       rect:
         serializedVersion: 2
-        x: 53
+        x: 50
         y: 159
-        width: 42
-        height: 43
+        width: 50
+        height: 53
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -234,12 +234,12 @@ TextureImporter:
       name: Perso_walk&Jump_BEL_4
       rect:
         serializedVersion: 2
-        x: 103
+        x: 100
         y: 159
-        width: 42
-        height: 46
+        width: 50
+        height: 53
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -255,12 +255,12 @@ TextureImporter:
       name: Perso_walk&Jump_BEL_5
       rect:
         serializedVersion: 2
-        x: 153
+        x: 150
         y: 159
-        width: 42
-        height: 43
+        width: 50
+        height: 53
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -276,12 +276,12 @@ TextureImporter:
       name: Perso_walk&Jump_BEL_6
       rect:
         serializedVersion: 2
-        x: 3
+        x: 0
         y: 106
-        width: 42
-        height: 46
+        width: 50
+        height: 53
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -298,11 +298,11 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 50
-        y: 54
+        y: 106
         width: 50
-        height: 52
+        height: 53
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -318,12 +318,12 @@ TextureImporter:
       name: Perso_walk&Jump_BEL_8
       rect:
         serializedVersion: 2
-        x: 3
-        y: 0
-        width: 42
-        height: 46
+        x: 100
+        y: 106
+        width: 50
+        height: 53
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -339,12 +339,12 @@ TextureImporter:
       name: Perso_walk&Jump_BEL_9
       rect:
         serializedVersion: 2
-        x: 53
-        y: 0
-        width: 42
-        height: 45
+        x: 0
+        y: 53
+        width: 50
+        height: 53
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -360,12 +360,12 @@ TextureImporter:
       name: Perso_walk&Jump_BEL_10
       rect:
         serializedVersion: 2
-        x: 103
-        y: 0
-        width: 42
-        height: 46
+        x: 50
+        y: 53
+        width: 50
+        height: 53
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -381,12 +381,12 @@ TextureImporter:
       name: Perso_walk&Jump_BEL_11
       rect:
         serializedVersion: 2
-        x: 153
+        x: 0
         y: 0
-        width: 42
-        height: 45
+        width: 50
+        height: 53
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -402,12 +402,12 @@ TextureImporter:
       name: Perso_walk&Jump_BEL_12
       rect:
         serializedVersion: 2
-        x: 203
+        x: 50
         y: 0
-        width: 42
-        height: 46
+        width: 50
+        height: 53
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -423,12 +423,12 @@ TextureImporter:
       name: Perso_walk&Jump_BEL_13
       rect:
         serializedVersion: 2
-        x: 108
-        y: 107
-        width: 32
-        height: 52
+        x: 100
+        y: 0
+        width: 50
+        height: 53
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -444,12 +444,12 @@ TextureImporter:
       name: Perso_walk&Jump_BEL_14
       rect:
         serializedVersion: 2
-        x: 50
-        y: 106
+        x: 150
+        y: 0
         width: 50
-        height: 33
+        height: 53
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -465,12 +465,12 @@ TextureImporter:
       name: Perso_walk&Jump_BEL_15
       rect:
         serializedVersion: 2
-        x: 8
-        y: 54
-        width: 32
-        height: 52
+        x: 200
+        y: 0
+        width: 50
+        height: 53
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []

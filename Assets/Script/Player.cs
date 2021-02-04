@@ -30,9 +30,11 @@ public class Player : MonoBehaviour
     public bool hasEye;
     public bool hasArm;
     public bool hasTail;
+    public bool crouch;
     private string ControlAnim;
     private string oldControlAnim;
     private bool[] knowCompetence;
+
 
     [Space]
 
@@ -74,7 +76,7 @@ public class Player : MonoBehaviour
         BgMusic.start();
     }
 
-    void FixedUpdate()
+    void Update()
     {
 
         float x = Input.GetAxis("Horizontal");
@@ -137,8 +139,17 @@ public class Player : MonoBehaviour
             coll.bottomOffset.y = -2f;
         }
 
+        while (Input.GetButton("Jump"))
+        {
+            if (coll.onGround)
+            {
+                crouch = true ;
+                //Jump(Vector2.up, false);
 
-        if (Input.GetButtonDown("Jump"))
+            }
+        }
+
+            if (Input.GetButtonUp("Jump"))
         {
             if (hasLeg)
             {
@@ -149,9 +160,11 @@ public class Player : MonoBehaviour
 
                 if (coll.onGround)
                 {
-                    anim.SetTrigger("jump");
+                    //anim.SetTrigger("jump");
                     Jump(Vector2.up, false);
-                    
+                    crouch = false;
+
+
                 }
             }
             else
